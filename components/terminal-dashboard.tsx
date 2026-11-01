@@ -1,12 +1,5 @@
-"use client";
-
 import {useEffect,useMemo,useState} from "react";
 import {
- Activity,ArrowDownRight,ArrowLeftRight,ArrowUpRight,BarChart3,Bell,CalendarDays,
- ChevronDown,Command,Globe2,LayoutDashboard,LineChart,Menu,MoreHorizontal,
- Newspaper,PanelLeftClose,Plus,Search,Settings2,ShieldCheck,Sparkles,Star,
- Wallet, X
-} from "lucide-react";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {Card,CardContent,CardDescription,CardHeader,CardTitle} from "@/components/ui/card";
@@ -14,11 +7,6 @@ import {Input} from "@/components/ui/input";
 import {Separator} from "@/components/ui/separator";
 import {MarketChart} from "@/components/widgets/market-chart";
 import {MarketPulse} from "@/components/widgets/market-pulse";
-import {MarketChart} from "@/components/widgets/market-chart";
-import {WatchlistCard} from "@/components/widgets/watchlist-card";
-import {NewsCard} from "@/components/widgets/news-card";
-import {MoversCard} from "@/components/widgets/movers-card";
-import {PortfolioCard} from "@/components/widgets/portfolio-card";
 import {WatchlistCard} from "@/components/widgets/watchlist-card";
 import {NewsCard} from "@/components/widgets/news-card";
 import {MoversCard} from "@/components/widgets/movers-card";

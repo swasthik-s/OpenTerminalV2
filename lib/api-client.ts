@@ -32,3 +32,29 @@ export async function apiDelete(path: string): Promise<void> {
   const response = await fetch(path, { method: "DELETE", cache: "no-store" });
   if (!response.ok && response.status !== 204) throw new ApiError(`HTTP ${response.status}`, response.status);
 }
+
+export type Quote = {
+  symbol: string;
+  name: string | null;
+  price: number | null;
+  change: number | null;
+  changePercent: number | null;
+  currency: string | null;
+  exchange: string | null;
+  source: string;
+};
+export type Candle = {
+  time: number;
+  open: number;
+  high: number;
+  low: number;
+  close: number;
+  volume: number;
+};
+export function fmt(value: number | null | undefined, digits = 2): string {
+  if (value === null || value === undefined || !Number.isFinite(value)) return "—";
+  return value.toLocaleString("en-US", {
+    minimumFractionDigits: digits,
+    maximumFractionDigits: digits,
+  });
+}

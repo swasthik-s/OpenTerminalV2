@@ -72,6 +72,8 @@
   html { background: var(--page); }
   body { background: var(--page); color: var(--foreground); }
   button, input { font: inherit; }
+  button, [role="button"], a, select { cursor: pointer; }
+  button:disabled, [aria-disabled="true"] { cursor: not-allowed; }
 }
 
 @layer components {

@@ -37,7 +37,8 @@
     "lightweight-charts": "^5.0.0",
     "@radix-ui/react-separator": "^1.1.7",
     "@radix-ui/react-scroll-area": "^1.2.10",
-    "@radix-ui/react-switch": "^1.2.6"
+    "@radix-ui/react-switch": "^1.2.6",
+    "@radix-ui/react-tabs": "^1.1.13"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.13",

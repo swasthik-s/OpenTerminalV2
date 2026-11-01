@@ -1,5 +1,11 @@
-import {useEffect,useMemo,useState} from "react";
+"use client";
+
+import {useEffect,useState} from "react";
 import {
+ Activity,ArrowDownRight,ArrowUpRight,Bell,CalendarDays,ChevronDown,
+ Command,Globe2,LayoutDashboard,LineChart,Menu,MoreHorizontal,
+ Newspaper,Plus,Search,Settings2,ShieldCheck,Sparkles,Star,Wallet,X
+} from "lucide-react";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {Card,CardContent,CardDescription,CardHeader,CardTitle} from "@/components/ui/card";

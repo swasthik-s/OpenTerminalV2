@@ -39,8 +39,26 @@ export type Quote = {
   price: number | null;
   change: number | null;
   changePercent: number | null;
+  open?: number | null;
+  high?: number | null;
+  low?: number | null;
+  previousClose?: number | null;
+  bid?: number | null;
+  ask?: number | null;
+  volume?: number | null;
+  avgVolume?: number | null;
+  marketCap?: number | null;
+  pe?: number | null;
+  eps?: number | null;
+  dividendYield?: number | null;
+  week52High?: number | null;
+  week52Low?: number | null;
+  beta?: number | null;
+  sharesOutstanding?: number | null;
   currency: string | null;
   exchange: string | null;
+  marketState?: string | null;
+  time?: number | null;
   source: string;
 };
 export type Candle = {

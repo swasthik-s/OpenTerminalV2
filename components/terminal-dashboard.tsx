@@ -18,12 +18,14 @@ import {MoversCard} from "@/components/widgets/movers-card";
 import {PortfolioCard} from "@/components/widgets/portfolio-card";
 import {MarketsWorkspace} from "@/components/workspaces/markets-workspace";
 import {WatchlistWorkspace} from "@/components/workspaces/watchlist-workspace";
+import {BrokerWorkspace} from "@/components/workspaces/broker-workspace";
 import {NewsWorkspace,ScreenerWorkspace,PredictionWorkspace,StrategyWorkspace,BacktestWorkspace,PropWorkspace,PortfolioWorkspace} from "@/components/workspaces/connected-workspaces";
 
-type ViewKey="overview"|"markets"|"watchlist"|"news"|"screener"|"strategy"|"backtest"|"polymarket"|"prop"|"portfolio"|"settings";
+type ViewKey="overview"|"markets"|"watchlist"|"news"|"screener"|"strategy"|"backtest"|"polymarket"|"prop"|"portfolio"|"broker"|"settings";
 const navigation:{group:string;items:{id:ViewKey;label:string;icon:typeof LayoutDashboard}[]}[]=[
  {group:"Workspace",items:[{id:"overview",label:"Overview",icon:LayoutDashboard},{id:"markets",label:"Markets",icon:LineChart},{id:"watchlist",label:"Watchlist",icon:Star},{id:"news",label:"News & research",icon:Newspaper},{id:"screener",label:"Screener",icon:Search}]},
  {group:"Trading lab",items:[{id:"strategy",label:"Strategy builder",icon:Settings2},{id:"backtest",label:"Backtesting",icon:Activity},{id:"polymarket",label:"Prediction markets",icon:Globe2},{id:"prop",label:"Prop firm",icon:ShieldCheck}]},
+ {group:"Execution",items:[{id:"broker",label:"Broker & journal",icon:Activity}]},
  {group:"Account",items:[{id:"portfolio",label:"Portfolio",icon:Wallet},{id:"settings",label:"Settings",icon:Settings2}]}
 ];
 function Panel({title,sub,children,action}:{title:string;sub?:string;children:React.ReactNode;action?:React.ReactNode}){return <Card className="app-panel"><CardHeader className="flex-row items-center justify-between space-y-0 p-4"><div><CardTitle className="text-sm">{title}</CardTitle>{sub&&<CardDescription className="mt-1 text-xs">{sub}</CardDescription>}</div>{action}</CardHeader><CardContent className="p-4 pt-0">{children}</CardContent></Card>}
